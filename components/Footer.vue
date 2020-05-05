@@ -1,13 +1,12 @@
 <template>
-  <v-card flat tile class="footer">
-    <v-footer padless dark>
-      <v-col cols="12"> </v-col>
-      <v-col class="caption mr-4"> </v-col>
-    </v-footer>
-    <v-card-text class="text--primary text-center body-2">
-      @2020 RxCanvas（CIS）
-    </v-card-text>
-  </v-card>
+  <v-footer padless app>
+    <v-card class="mx-auto" width="100%">
+      <v-divider></v-divider>
+      <v-card-text class="text--primary text-center body-2">
+        @2020 <strong> RxCanvas</strong> − Reserved
+      </v-card-text>
+    </v-card>
+  </v-footer>
 </template>
 
 <script lang="ts">
