@@ -1,4 +1,5 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex';
+export const strict = false;
 
 export const state = () => ({
   commit: '',

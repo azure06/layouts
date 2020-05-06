@@ -128,7 +128,7 @@ export default {
           enforce: 'pre',
           test: /\.(js|ts|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|rx-component)/
+          exclude: /(node_modules|rx-canvas)/
         });
       }
     }

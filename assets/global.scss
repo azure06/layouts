@@ -87,3 +87,8 @@
   --v-warning-darken3: #9d4000;
   --v-warning-darken4: #802700;
 }
+
+
+.theme--dark.v-navigation-drawer {
+  background-color: var(--v-grey-darken-4) !important;
+}
