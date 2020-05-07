@@ -13,27 +13,27 @@
       <v-row justify="center" class="py-4" @mousedown="onCanvasClick">
         <v-card id="rx-sheet" :color="sheetColor" flat tile>
           <div
-            v-for="index in nextSlotIndex"
-            v-show="index < nextSlotIndex"
-            :id="`rx-component-${index}`"
-            :key="`rx-component-${index}`"
+            v-for="(component, index) in components"
+            v-show="index < components.length - 1"
+            :id="`rx-component-${component.id}`"
+            :key="`rx-component-${component.id}`"
             class="rx-component"
-            @mousedown.stop="onComponentClick(components[index - 1])"
+            @mousedown.stop="onComponentClick(component.id)"
           >
-            <div class="pa-6">
+            <div v-if="index < components.length - 1" class="pa-2">
               <input
                 type="text"
-                class="font-weight-bold display-4"
                 style="outline: none; border: none;"
-                value="RxCanvas"
+                placeholder="Click to add text"
+                :value="component.subtitle"
+                @input="
+                  event =>
+                    changeComponentTitle({
+                      subtitle: event.target.value,
+                      id: component.id
+                    })
+                "
               />
-              <div
-                type="text"
-                class="subtitle-1 font-weight-bold px-2"
-                style="letter-spacing: 0.15rem"
-              >
-                Relentless pursuit of perfection
-              </div>
             </div>
           </div>
         </v-card>
@@ -47,37 +47,41 @@ import Vue from 'vue';
 import { mapGetters, mapMutations, mapActions } from 'vuex';
 import { interval } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { getNextEl, setCanvasEl } from '@/utils/vue';
 import { CanvasComponent } from '~/store/canvas/types';
 
 export default Vue.extend({
   computed: {
-    nextSlotIndex(): number {
-      return this.components.length + 1;
-    },
     sheetColor() {
       return this.$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-3';
     },
+    nextId(): string {
+      const indexLast = this.components.length - 1;
+      return this.components[indexLast].id;
+    },
     ...mapGetters('canvas', {
       tool: 'tool',
-      getComponentById: 'componentById',
-      components: 'components'
+      components: 'componentsPlusNext'
     })
   },
   mounted() {
     this.$nextTick(() => {
+      setCanvasEl(this.$el.querySelector('#rx-canvas') as HTMLElement);
+
       // @ts-ignore
       this.createCanvas(this.$el.querySelector('#rx-canvas'));
       // @ts-ignore
       this.createSheet(this.$el.querySelector('#rx-sheet'));
       // @ts-ignore
-      this.createComponent(
-        this.$el.querySelector(`#rx-component-${this.nextSlotIndex}`)!
-      );
+      this.createComponent({
+        id: this.nextId,
+        target: getNextEl(this.nextId as string)
+      });
 
       const sub = interval(1000 / 60)
         .pipe(
           tap(value => {
-            const component: CanvasComponent = this.getComponentById(0);
+            const [component]: CanvasComponent[] = this.components;
             const [rxComponent, rxHandler] = component.handlers;
             const percent = value / 120;
             const k = Math.sin((Math.PI / 2) * percent);
@@ -100,15 +104,16 @@ export default Vue.extend({
     ...mapMutations('canvas', {
       createCanvas: 'CREATE_CANVAS',
       createSheet: 'CREATE_SHEET',
-      createComponent: 'CREATE_COMPONENT'
+      createComponent: 'CREATE_COMPONENT',
+      changeComponentTitle: 'UPDATE_COMPONENT'
     }),
     onCanvasClick(): void {
       // @ts-ignore
       this.setFocus(null);
     },
-    onComponentClick(component: CanvasComponent): void {
+    onComponentClick(id: string): void {
       // @ts-ignore
-      this.setFocus(component.id);
+      this.setFocus(id);
     }
   }
 });
@@ -127,7 +132,7 @@ export default Vue.extend({
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   position: relative;
-  left: calc(50% - 300px);
-  top: calc(25% - 240px);
+  left: calc(50% - 80px);
+  top: calc(25% - 40px);
 }
 </style>

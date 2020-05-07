@@ -43,7 +43,7 @@
       </v-col>
     </v-row>
 
-    <v-row justify="end" align="center">
+    <v-row v-show="$vuetify.breakpoint.mdAndUp" justify="end" align="center">
       <div class="messages">
         <v-slider
           append-icon="mdi-magnify-plus-outline"
@@ -59,7 +59,6 @@
         ></v-slider>
       </div>
       <v-btn-toggle
-        v-show="$vuetify.breakpoint.mdAndUp"
         class="mx-4"
         dense
         :value="theme"

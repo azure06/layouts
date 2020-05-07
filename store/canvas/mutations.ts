@@ -1,10 +1,19 @@
 import { MutationTree } from 'vuex';
 import { CanvasState } from './state';
-import { Tool } from './types';
+import { Tool, CanvasComponent } from './types';
 import { RxComponent, RxHandler } from '~/rx-component/src/main';
 import { ComponentOptions } from '~/rx-component/src/internal/types';
 
 type ComponentOptionsEx = ComponentOptions & { focused?: boolean };
+
+type Id = { id: string };
+
+type Component = Id &
+  (
+    | Pick<CanvasComponent, 'title' | 'subtitle'>
+    | Pick<CanvasComponent, 'title'>
+    | Pick<CanvasComponent, 'subtitle'>
+  );
 
 const mutations: MutationTree<CanvasState> = {
   CHANGE_TOOL(state, tool: Tool) {
@@ -12,6 +21,12 @@ const mutations: MutationTree<CanvasState> = {
   },
   SET_FOCUS(state, id: string | null) {
     state.focus = id;
+  },
+  UPDATE_COMPONENT(state, { id, ...rest }: Component) {
+    state.components[id].title =
+      'title' in rest ? rest.title : state.components[id].title;
+    state.components[id].subtitle =
+      'subtitle' in rest ? rest.subtitle : state.components[id].subtitle;
   },
   UPDATE_COMPONENT_OPTIONS(
     state,
@@ -36,13 +51,21 @@ const mutations: MutationTree<CanvasState> = {
       rxHandler.updateOptions(options);
     }
   },
-  CREATE_COMPONENT(state, target: HTMLElement) {
+  REMOVE_COMPONENT(state, id: string) {
+    state.components = Object.values(state.components)
+      .filter(component => component.id !== id)
+      .reduce((acc, value) => {
+        acc[value.id] = value;
+        return acc;
+      }, {} as { [id: string]: CanvasComponent });
+  },
+  CREATE_COMPONENT(state, { id, target }: { id: string; target: HTMLElement }) {
     const rxComponent = new RxComponent(target, {
-      width: '600px',
-      height: '240px'
+      width: '160px',
+      height: '40px'
     });
     const rxHandler = new RxHandler(rxComponent, {
-      draggable: false,
+      draggable: true,
       rotable: false,
       scalable: false,
       interactive: false
@@ -50,13 +73,12 @@ const mutations: MutationTree<CanvasState> = {
       .onFocus(() => rxComponent.focused)
       .onBlur(() => rxComponent.focused);
 
-    const id = '' + Object.values(state.components).length;
-
     state.components = {
       ...state.components,
       [id]: {
         id,
-        name: `Element ${id}`,
+        title: `Text ${Object.values(state.components).length + 1}`,
+        subtitle: '',
         handlers: [rxComponent, rxHandler] as [RxComponent, RxHandler]
       }
     };

@@ -6,6 +6,7 @@ export type RxHandlers = [RxComponent, RxHandler];
 
 export interface CanvasComponent {
   id: string;
-  name: string;
+  title: string;
+  subtitle: string;
   handlers: RxHandlers;
 }

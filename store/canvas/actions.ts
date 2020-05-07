@@ -84,6 +84,10 @@ const actions: ActionTree<CanvasState, RootState> = {
 
     commit('SET_FOCUS', id);
   },
+  removeComponent({ commit, state }, id: string) {
+    if (state.focus === id) commit('SET_FOCUS', null);
+    commit('REMOVE_COMPONENT', id);
+  },
   createComponent() {}
 };
 
