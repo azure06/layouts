@@ -96,7 +96,6 @@ export default Vue.extend({
       const sheet: RxHandlers | undefined = this.sheet;
       if (sheet) {
         const k = (value + 50) / 50 || 0.01;
-        console.warn(k);
         sheet[0].scale([k, k]);
         this.zoom = value;
       } else {

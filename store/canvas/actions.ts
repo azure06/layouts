@@ -18,19 +18,25 @@ const actions: ActionTree<CanvasState, RootState> = {
         case 'scale':
           commit('UPDATE_COMPONENT_OPTIONS', {
             id: component.id,
-            options: { scalable: true }
+            options: { scalable: true, interactive: true }
           });
           break;
         case 'warp':
           commit('UPDATE_COMPONENT_OPTIONS', {
             id: component.id,
-            options: { warpable: true }
+            options: { warpable: true, interactive: true }
           });
           break;
         case 'resize':
           commit('UPDATE_COMPONENT_OPTIONS', {
             id: component.id,
-            options: { resizable: true }
+            options: { resizable: true, interactive: true }
+          });
+          break;
+        case 'zoom':
+          commit('UPDATE_COMPONENT_OPTIONS', {
+            id: component.id,
+            options: { interactive: false }
           });
           break;
         default:
@@ -54,7 +60,30 @@ const actions: ActionTree<CanvasState, RootState> = {
         commit('CHANGE_TOOL', tool);
     }
   },
-  setFocus() {},
+  setFocus({ commit, state }, id: string | null) {
+    if (id === null && state.focus !== null) {
+      commit('UPDATE_COMPONENT_OPTIONS', {
+        id: state.focus,
+        options: { interactive: false, focused: false }
+      });
+    } else if (id !== null && state.focus === null) {
+      commit('UPDATE_COMPONENT_OPTIONS', {
+        id,
+        options: { interactive: true, focused: true }
+      });
+    } else if (id !== null && state.focus !== null) {
+      commit('UPDATE_COMPONENT_OPTIONS', {
+        id: state.focus,
+        options: { interactive: false, focused: false }
+      });
+      commit('UPDATE_COMPONENT_OPTIONS', {
+        id,
+        options: { interactive: true, focused: true }
+      });
+    }
+
+    commit('SET_FOCUS', id);
+  },
   createComponent() {}
 };
 

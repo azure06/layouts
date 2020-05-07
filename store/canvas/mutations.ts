@@ -4,6 +4,8 @@ import { Tool } from './types';
 import { RxComponent, RxHandler } from '~/rx-component/src/main';
 import { ComponentOptions } from '~/rx-component/src/internal/types';
 
+type ComponentOptionsEx = ComponentOptions & { focused?: boolean };
+
 const mutations: MutationTree<CanvasState> = {
   CHANGE_TOOL(state, tool: Tool) {
     state.tool = tool;
@@ -13,19 +15,25 @@ const mutations: MutationTree<CanvasState> = {
   },
   UPDATE_COMPONENT_OPTIONS(
     state,
-    { id, options }: { id: string; options: ComponentOptions }
+    { id, options }: { id: string; options: ComponentOptionsEx }
   ) {
-    const rxHandler = state.components[id].handlers[1];
-    rxHandler.updateOptions(options);
+    const [rxComponent, rxHandler] = state.components[id].handlers;
+    const { focused, ...rest } = options;
+    if (focused !== undefined) rxComponent.setFocus(focused);
+    rxHandler.updateOptions(rest);
   },
-  UPDATE_SHEET_OPTIONS(state, options: ComponentOptions) {
+  UPDATE_SHEET_OPTIONS(state, { focused, ...options }: ComponentOptionsEx) {
     if (state.sheet) {
-      state.sheet[1].updateOptions(options);
+      const [rxComponent, rxHandler] = state.sheet;
+      if (focused !== undefined) rxComponent.setFocus(focused);
+      rxHandler.updateOptions(options);
     }
   },
-  UPDATE_CANVAS_OPTIONS(state, options: ComponentOptions) {
+  UPDATE_CANVAS_OPTIONS(state, { focused, ...options }: ComponentOptionsEx) {
     if (state.canvas) {
-      state.canvas[1].updateOptions(options);
+      const [rxComponent, rxHandler] = state.canvas;
+      if (focused !== undefined) rxComponent.setFocus(focused);
+      rxHandler.updateOptions(options);
     }
   },
   CREATE_COMPONENT(state, target: HTMLElement) {
@@ -39,12 +47,8 @@ const mutations: MutationTree<CanvasState> = {
       scalable: false,
       interactive: false
     })
-      .onFocus(() => {
-        rxComponent.setFocus(true);
-      })
-      .onBlur(() => {
-        rxComponent.setFocus(true);
-      });
+      .onFocus(() => rxComponent.focused)
+      .onBlur(() => rxComponent.focused);
 
     const id = '' + Object.values(state.components).length;
 
