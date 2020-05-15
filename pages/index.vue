@@ -20,10 +20,13 @@
             class="rx-component"
             @mousedown.stop="onComponentClick(component.id)"
           >
-            <div v-if="index < components.length - 1" class="pa-2">
-              <input
+            <div v-if="index < components.length - 1" class="pa-2 fill-height">
+              <textarea
                 type="text"
-                style="outline: none; border: none;"
+                :style="
+                  `outline: none; border: none; resize: none; width: 100%; height: 100%; color:${component.style.fontColor}; font-style:${component.style.fontStyle};` +
+                    `font-weight:${component.style.fontWeight}; font-size:${component.style.fontSize}px; text-decoration:${component.style.textDecoration}; `
+                "
                 placeholder="Click to add text"
                 :value="component.subtitle"
                 @input="

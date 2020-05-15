@@ -9,4 +9,16 @@ export interface CanvasComponent {
   title: string;
   subtitle: string;
   handlers: RxHandlers;
+  style: {
+    fontSize: number;
+    fontColor: string;
+    fontWeight: number;
+    fontStyle: 'normal' | 'italic';
+    textDecoration:
+      | 'unset'
+      | 'overline'
+      | 'line-through'
+      | 'underline'
+      | 'underline overline';
+  };
 }

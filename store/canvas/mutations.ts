@@ -8,12 +8,14 @@ type ComponentOptionsEx = ComponentOptions & { focused?: boolean };
 
 type Id = { id: string };
 
-type Component = Id &
+type ComponentContent = Id &
   (
     | Pick<CanvasComponent, 'title' | 'subtitle'>
     | Pick<CanvasComponent, 'title'>
     | Pick<CanvasComponent, 'subtitle'>
   );
+
+type ComponentStyle = Id & Pick<CanvasComponent, 'style'>;
 
 const mutations: MutationTree<CanvasState> = {
   CHANGE_TOOL(state, tool: Tool) {
@@ -22,11 +24,14 @@ const mutations: MutationTree<CanvasState> = {
   SET_FOCUS(state, id: string | null) {
     state.focus = id;
   },
-  UPDATE_COMPONENT(state, { id, ...rest }: Component) {
+  UPDATE_COMPONENT(state, { id, ...rest }: ComponentContent) {
     state.components[id].title =
       'title' in rest ? rest.title : state.components[id].title;
     state.components[id].subtitle =
       'subtitle' in rest ? rest.subtitle : state.components[id].subtitle;
+  },
+  UPDATE_COMPONENT_STYLE(state, { id, style }: ComponentStyle) {
+    state.components[id].style = style;
   },
   UPDATE_COMPONENT_OPTIONS(
     state,
@@ -79,7 +84,14 @@ const mutations: MutationTree<CanvasState> = {
         id,
         title: `Text ${Object.values(state.components).length + 1}`,
         subtitle: '',
-        handlers: [rxComponent, rxHandler] as [RxComponent, RxHandler]
+        handlers: [rxComponent, rxHandler] as [RxComponent, RxHandler],
+        style: {
+          fontColor: 'unset',
+          fontStyle: 'normal',
+          textDecoration: 'unset',
+          fontSize: 16,
+          fontWeight: 400
+        }
       }
     };
   },

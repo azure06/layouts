@@ -6,14 +6,11 @@
         <v-col class="d-flex justify-center">
           <v-color-picker
             v-model="color"
-            show-swatches
+            :disabled="!focus"
+            :hide-canvas="!focus"
+            :show-swatches="!!focus"
             swatches-max-height="75"
           ></v-color-picker>
-        </v-col>
-        <v-col class="d-flex justify-center">
-          <v-btn-toggle v-model="toggle" dense mandatory>
-            <v-btn v-for="t in types" :key="t" @click="type = t">{{ t }}</v-btn>
-          </v-btn-toggle>
         </v-col>
       </v-row>
     </template>

@@ -2,10 +2,12 @@
   <v-app class="app">
     <!-- Header -->
     <app-bar
-      :tool="toolToIndex"
+      :tool="tool"
+      :formats="formats"
       :zoom="zoom"
-      @tool-change="value => changeTool(indexToTool(value))"
-      @change-theme="value => ($vuetify.theme.dark = value === 0)"
+      @tool-change="changeTool"
+      @theme-change="value => ($vuetify.theme.dark = value === 0)"
+      @format-change="style => changeStyle({ id: focus, style })"
       @zoom-change="changeZoom"
     />
 
@@ -37,8 +39,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters, mapActions } from 'vuex';
-import { Tool, RxHandlers } from '../store/canvas/types';
+import { mapGetters, mapActions, mapMutations } from 'vuex';
+import { RxHandlers } from '../store/canvas/types';
 import appFooter from '@/components/appfooter.vue';
 import drawer from '@/components/drawer.vue';
 import appBar from '@/components/appbar.vue';
@@ -57,40 +59,23 @@ export default Vue.extend({
   },
   computed: {
     ...mapGetters('canvas', {
+      componentById: 'componentById',
+      focus: 'focus',
       tool: 'tool',
       sheet: 'sheet'
     }),
-    toolToIndex() {
-      switch (this.tool as Tool) {
-        case 'scale':
-          return 0;
-        case 'warp':
-          return 1;
-        case 'resize':
-          return 2;
-        default:
-          return -1;
-      }
+    formats(): any | undefined {
+      const value = this.componentById(this.focus);
+      return value ? value.style : value;
     }
   },
   methods: {
     ...mapActions('canvas', {
       changeTool: 'changeTool'
     }),
-    indexToTool(toolIndex: number): Tool {
-      switch (toolIndex) {
-        case 0:
-          return 'zoom';
-        case 1:
-          return 'warp';
-        case 2:
-          return 'resize';
-        case 3:
-          return 'scale';
-        default:
-          return 'none';
-      }
-    },
+    ...mapMutations('canvas', {
+      changeStyle: 'UPDATE_COMPONENT_STYLE'
+    }),
     changeZoom(value: number) {
       this.zoom = value;
       const sheet: RxHandlers | undefined = this.sheet;
