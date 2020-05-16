@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "支援",
+    "parentId": 1,
+    "parentName": "お知らせ"
+  },
+  {
+    "id": 2,
+    "name": "行政からの通達",
+    "parentId": 1,
+    "parentName": "お知らせ"
+  },
+  {
+    "id": 3,
+    "name": "CISからのお知らせ",
+    "parentId": 1,
+    "parentName": "お知らせ"
+  },
+  {
+    "id": 4,
+    "name": "その他",
+    "parentId": 1,
+    "parentName": "お知らせ"
+  },
+  {
+    "id": 5,
+    "name": "資金調達・経費減免",
+    "parentId": 2,
+    "parentName": "支援情報"
+  },
+  {
+    "id": 6,
+    "name": "物資",
+    "parentId": 2,
+    "parentName": "支援情報"
+  },
+  {
+    "id": 7,
+    "name": "住宅など",
+    "parentId": 2,
+    "parentName": "支援情報"
+  },
+  {
+    "id": 8,
+    "name": "経営支援",
+    "parentId": 2,
+    "parentName": "支援情報"
+  },
+  {
+    "id": 9,
+    "name": "人材",
+    "parentId": 2,
+    "parentName": "支援情報"
+  },
+  {
+    "id": 10,
+    "name": "情報セキュリティ",
+    "parentId": 3,
+    "parentName": "IT活用"
+  },
+  {
+    "id": 11,
+    "name": "事業へのIT活用",
+    "parentId": 3,
+    "parentName": "IT活用"
+  },
+  {
+    "id": 12,
+    "name": "組織運営",
+    "parentId": 3,
+    "parentName": "IT活用"
+  },
+  {
+    "id": 13,
+    "name": "NPO対応集",
+    "parentId": 4,
+    "parentName": "衛生管理・感染対応"
+  },
+  {
+    "id": 14,
+    "name": "感染予防・対策",
+    "parentId": 4,
+    "parentName": "衛生管理・感染対応"
+  },
+  {
+    "id": 15,
+    "name": "感染後の対応",
+    "parentId": 4,
+    "parentName": "衛生管理・感染対応"
+  },
+  {
+    "id": 16,
+    "name": "メンタルヘルス",
+    "parentId": 4,
+    "parentName": "衛生管理・感染対応"
+  },
+  {
+    "id": 17,
+    "name": "全国",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 18,
+    "name": "北海道地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 19,
+    "name": "東北地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 20,
+    "name": "関東地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 21,
+    "name": "中部地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 22,
+    "name": "関西地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 23,
+    "name": "中四国地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 24,
+    "name": "九州地方・沖縄地方",
+    "parentId": 5,
+    "parentName": "行政からの通達等"
+  },
+  {
+    "id": 25,
+    "name": "NPOの活動",
+    "parentId": 6,
+    "parentName": "NPOの声・提言"
+  },
+  {
+    "id": 26,
+    "name": "NPOアンケート",
+    "parentId": 6,
+    "parentName": "NPOの声・提言"
+  },
+  {
+    "id": 27,
+    "name": "オピニオン",
+    "parentId": 6,
+    "parentName": "NPOの声・提言"
+  },
+  {
+    "id": 28,
+    "name": "提言・要望書",
+    "parentId": 6,
+    "parentName": "NPOの声・提言"
+  },
+  {
+    "id": 29,
+    "name": "実践してみました",
+    "parentId": 6,
+    "parentName": "NPOの声・提言"
+  },
+  {
+    "id": 31,
+    "name": "問い合わせフォーム",
+    "parentId": 7,
+    "parentName": "お問い合わせ"
+  },
+  {
+    "id": 32,
+    "name": "情報提供について",
+    "parentId": 7,
+    "parentName": "お問い合わせ"
+  },
+  {
+    "id": 33,
+    "name": "募集中",
+    "parentId": 7,
+    "parentName": "お問い合わせ"
+  },
+  {
+    "id": 34,
+    "name": "全国のNPO支援センター",
+    "parentId": 8,
+    "parentName": "リンク集"
+  },
+  {
+    "id": 35,
+    "name": "Facebook",
+    "parentId": 8,
+    "parentName": "リンク集"
+  },
+  {
+    "id": 36,
+    "name": "Twitter",
+    "parentId": 8,
+    "parentName": "リンク集"
+  }
+]

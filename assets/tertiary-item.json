@@ -1,0 +1,866 @@
+[
+  {
+    "id": 1,
+    "name": "支援",
+    "parentId": 1,
+    "parentName": "支援"
+  },
+  {
+    "id": 2,
+    "name": "行政からの通達",
+    "parentId": 2,
+    "parentName": "行政からの通達"
+  },
+  {
+    "id": 3,
+    "name": "CISからのお知らせ",
+    "parentId": 3,
+    "parentName": "CISからのお知らせ"
+  },
+  {
+    "id": 4,
+    "name": "その他",
+    "parentId": 4,
+    "parentName": "その他"
+  },
+  {
+    "id": 5,
+    "name": "全般",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 6,
+    "name": "助成金",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 7,
+    "name": "補助金",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 8,
+    "name": "融資",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 9,
+    "name": "寄付",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 10,
+    "name": "無償・低額サポート",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 11,
+    "name": "利子補給",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 12,
+    "name": "相談窓口",
+    "parentId": 5,
+    "parentName": "資金調達・経費減免"
+  },
+  {
+    "id": 13,
+    "name": "衛生関連物資",
+    "parentId": 6,
+    "parentName": "物資"
+  },
+  {
+    "id": 14,
+    "name": "住居",
+    "parentId": 7,
+    "parentName": "住宅など"
+  },
+  {
+    "id": 15,
+    "name": "その他の場所",
+    "parentId": 7,
+    "parentName": "住宅など"
+  },
+  {
+    "id": 16,
+    "name": "経営相談",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 17,
+    "name": "会計",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 18,
+    "name": "法務",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 19,
+    "name": "労務",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 20,
+    "name": "BCP策定",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 21,
+    "name": "リスクコミュニケーション",
+    "parentId": 8,
+    "parentName": "経営支援"
+  },
+  {
+    "id": 22,
+    "name": "ボランティア",
+    "parentId": 9,
+    "parentName": "人材"
+  },
+  {
+    "id": 23,
+    "name": "情報セキュリティ",
+    "parentId": 10,
+    "parentName": "情報セキュリティ"
+  },
+  {
+    "id": 24,
+    "name": "面談",
+    "parentId": 11,
+    "parentName": "事業へのIT活用"
+  },
+  {
+    "id": 25,
+    "name": "セミナー",
+    "parentId": 11,
+    "parentName": "事業へのIT活用"
+  },
+  {
+    "id": 26,
+    "name": "アウトリーチ・広報",
+    "parentId": 11,
+    "parentName": "事業へのIT活用"
+  },
+  {
+    "id": 27,
+    "name": "事業づくり",
+    "parentId": 11,
+    "parentName": "事業へのIT活用"
+  },
+  {
+    "id": 28,
+    "name": "テレワーク",
+    "parentId": 12,
+    "parentName": "組織運営"
+  },
+  {
+    "id": 29,
+    "name": "会計業務",
+    "parentId": 12,
+    "parentName": "組織運営"
+  },
+  {
+    "id": 30,
+    "name": "行政手続き",
+    "parentId": 12,
+    "parentName": "組織運営"
+  },
+  {
+    "id": 31,
+    "name": "総会や理事会のオンライン開催",
+    "parentId": 12,
+    "parentName": "組織運営"
+  },
+  {
+    "id": 32,
+    "name": "現在の感染情報",
+    "parentId": 14,
+    "parentName": "感染予防・対策"
+  },
+  {
+    "id": 33,
+    "name": "予防・対策情報",
+    "parentId": 14,
+    "parentName": "感染予防・対策"
+  },
+  {
+    "id": 34,
+    "name": "総会の開催方法",
+    "parentId": 13,
+    "parentName": "NPO対応集"
+  },
+  {
+    "id": 35,
+    "name": "運営方針（BCP・感染対策方針）",
+    "parentId": 13,
+    "parentName": "NPO対応集"
+  },
+  {
+    "id": 36,
+    "name": "行事開催・参加の是非の判断の仕方",
+    "parentId": 13,
+    "parentName": "NPO対応集"
+  },
+  {
+    "id": 37,
+    "name": "委託金や助成金の扱い",
+    "parentId": 13,
+    "parentName": "NPO対応集"
+  },
+  {
+    "id": 38,
+    "name": "保険",
+    "parentId": 13,
+    "parentName": "NPO対応集"
+  },
+  {
+    "id": 39,
+    "name": "関係者が感染した場合の対応方法（行政）",
+    "parentId": 15,
+    "parentName": "感染後の対応"
+  },
+  {
+    "id": 40,
+    "name": "関係者が感染した場合の対応方法",
+    "parentId": 15,
+    "parentName": "感染後の対応"
+  },
+  {
+    "id": 41,
+    "name": "専門機関",
+    "parentId": 16,
+    "parentName": "メンタルヘルス"
+  },
+  {
+    "id": 42,
+    "name": "通達・制度変更",
+    "parentId": 17,
+    "parentName": "全国"
+  },
+  {
+    "id": 43,
+    "name": "北海道",
+    "parentId": 18,
+    "parentName": "北海道地方"
+  },
+  {
+    "id": 44,
+    "name": "札幌市",
+    "parentId": 18,
+    "parentName": "北海道地方"
+  },
+  {
+    "id": 45,
+    "name": "青森県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 46,
+    "name": "岩手県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 47,
+    "name": "宮城県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 48,
+    "name": "仙台市",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 49,
+    "name": "秋田県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 50,
+    "name": "山形県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 51,
+    "name": "福島県",
+    "parentId": 19,
+    "parentName": "東北地方"
+  },
+  {
+    "id": 52,
+    "name": "茨城県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 53,
+    "name": "栃木県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 54,
+    "name": "群馬県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 55,
+    "name": "埼玉県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 56,
+    "name": "さいたま市",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 57,
+    "name": "千葉県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 58,
+    "name": "千葉市",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 59,
+    "name": "東京都",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 60,
+    "name": "神奈川県",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 61,
+    "name": "横浜市",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 62,
+    "name": "川崎市",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 63,
+    "name": "相模原市",
+    "parentId": 20,
+    "parentName": "関東地方"
+  },
+  {
+    "id": 64,
+    "name": "新潟県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 65,
+    "name": "新潟市",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 66,
+    "name": "富山県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 67,
+    "name": "石川県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 68,
+    "name": "福井県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 69,
+    "name": "山梨県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 70,
+    "name": "長野県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 71,
+    "name": "岐阜県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 72,
+    "name": "静岡県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 73,
+    "name": "静岡市",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 74,
+    "name": "浜松市",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 75,
+    "name": "愛知県",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 76,
+    "name": "名古屋市",
+    "parentId": 21,
+    "parentName": "中部地方"
+  },
+  {
+    "id": 77,
+    "name": "三重県",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 78,
+    "name": "滋賀県",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 79,
+    "name": "京都府",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 80,
+    "name": "京都市",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 81,
+    "name": "大阪府",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 82,
+    "name": "大阪市",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 83,
+    "name": "堺市",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 84,
+    "name": "兵庫県",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 85,
+    "name": "神戸市",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 86,
+    "name": "奈良県",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 87,
+    "name": "和歌山県",
+    "parentId": 22,
+    "parentName": "関西地方"
+  },
+  {
+    "id": 88,
+    "name": "鳥取県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 89,
+    "name": "島根県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 90,
+    "name": "岡山県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 91,
+    "name": "岡山市",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 92,
+    "name": "広島県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 93,
+    "name": "広島市",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 94,
+    "name": "山口県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 95,
+    "name": "徳島県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 96,
+    "name": "香川県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 97,
+    "name": "愛媛県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 98,
+    "name": "高知県",
+    "parentId": 23,
+    "parentName": "中四国地方"
+  },
+  {
+    "id": 99,
+    "name": "福岡県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 100,
+    "name": "北九州市",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 101,
+    "name": "福岡市",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 102,
+    "name": "佐賀県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 103,
+    "name": "長崎県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 104,
+    "name": "熊本県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 105,
+    "name": "熊本市",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 106,
+    "name": "大分県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 107,
+    "name": "宮崎県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 108,
+    "name": "鹿児島県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 109,
+    "name": "沖縄県",
+    "parentId": 24,
+    "parentName": "九州地方・沖縄地方"
+  },
+  {
+    "id": 110,
+    "name": "活動情報",
+    "parentId": 25,
+    "parentName": "NPOの活動"
+  },
+  {
+    "id": 111,
+    "name": "メディアからの情報",
+    "parentId": 25,
+    "parentName": "NPOの活動"
+  },
+  {
+    "id": 112,
+    "name": "新型コロナウイルスの感染拡大への対応及び支援に関するNPO 法人緊急アンケート",
+    "parentId": 26,
+    "parentName": "NPOアンケート"
+  },
+  {
+    "id": 113,
+    "name": "活動分野別アンケート",
+    "parentId": 26,
+    "parentName": "NPOアンケート"
+  },
+  {
+    "id": 114,
+    "name": "オピニオン",
+    "parentId": 27,
+    "parentName": "オピニオン"
+  },
+  {
+    "id": 115,
+    "name": "全分野",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 116,
+    "name": "保健,医療,福祉",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 117,
+    "name": "社会教育",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 118,
+    "name": "まちづくり",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 119,
+    "name": "観光",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 120,
+    "name": "農山漁村・中山間地域",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 121,
+    "name": "学術,文化,芸術,スポーツ",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 122,
+    "name": "環境保全",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 123,
+    "name": "災害救援",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 124,
+    "name": "地域安全",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 125,
+    "name": "人権,平和",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 126,
+    "name": "国際協力,国際交流",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 127,
+    "name": "男女共同参画社会",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 128,
+    "name": "子どもの健全育成",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 129,
+    "name": "情報化社会",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 130,
+    "name": "科学技術",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 131,
+    "name": "経済活動の活性化",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 132,
+    "name": "職業能力の開発,雇用",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 133,
+    "name": "消費者保護",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 134,
+    "name": "NPO支援",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 135,
+    "name": "条例指定",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 136,
+    "name": "その他",
+    "parentId": 28,
+    "parentName": "提言・要望書"
+  },
+  {
+    "id": 137,
+    "name": "実践してみました",
+    "parentId": 29,
+    "parentName": "実践してみました"
+  },
+  {
+    "id": 139,
+    "name": "問い合わせフォーム",
+    "parentId": 31,
+    "parentName": "問い合わせフォーム"
+  },
+  {
+    "id": 140,
+    "name": "情報提供について",
+    "parentId": 32,
+    "parentName": "情報提供について"
+  },
+  {
+    "id": 141,
+    "name": "コラボレーター",
+    "parentId": 33,
+    "parentName": "募集中"
+  },
+  {
+    "id": 142,
+    "name": "ご寄付・協賛",
+    "parentId": 33,
+    "parentName": "募集中"
+  },
+  {
+    "id": 143,
+    "name": "全国のNPO支援センター",
+    "parentId": 34,
+    "parentName": "全国のNPO支援センター"
+  },
+  {
+    "id": 144,
+    "name": "Facebook",
+    "parentId": 35,
+    "parentName": "Facebook"
+  },
+  {
+    "id": 145,
+    "name": "Twitter",
+    "parentId": 36,
+    "parentName": "Twitter"
+  }
+]
