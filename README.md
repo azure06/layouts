@@ -1,6 +1,3 @@
 # RxCanvas
 
-## Project setup
-```
-npm install
-```
+## Demo for RxComponent

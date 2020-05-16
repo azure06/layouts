@@ -6,6 +6,6 @@ export function setCanvasEl(canvas_: HTMLElement) {
 
 export function getNextEl(id: string): HTMLElement | null {
   return canvas
-    ? (canvas.querySelector(`#rx-component-${id}`) as HTMLElement)
+    ? (canvas.querySelector(`#rxcomponent-${id}`) as HTMLElement)
     : null;
 }

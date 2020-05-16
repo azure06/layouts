@@ -1,8 +1,8 @@
 import { MutationTree } from 'vuex';
+import { RxComponent, RxHandler } from '../../rxcomponent/src/main';
+import { ComponentOptions } from '../../rxcomponent/src/internal/types';
 import { CanvasState } from './state';
 import { Tool, CanvasComponent } from './types';
-import { RxComponent, RxHandler } from '~/rx-component/src/main';
-import { ComponentOptions } from '~/rx-component/src/internal/types';
 
 type ComponentOptionsEx = ComponentOptions & { focused?: boolean };
 

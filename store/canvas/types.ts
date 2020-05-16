@@ -1,4 +1,4 @@
-import { RxComponent, RxHandler } from '~/rx-component/src/main';
+import { RxComponent, RxHandler } from '../../rxcomponent/src/main';
 
 export type Tool = 'scale' | 'warp' | 'resize' | 'zoom' | 'none';
 

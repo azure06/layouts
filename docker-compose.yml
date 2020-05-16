@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    container_name: rx-canvas
+    container_name: rxcanvas
     build:
       context: .
       dockerfile: Dockerfile

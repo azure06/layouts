@@ -2,7 +2,7 @@
   <!-- First card as wrapper  -->
   <v-card flat tile width="100%" height="100%">
     <v-card
-      id="rx-canvas"
+      id="rxcanvas"
       class="mx-auto"
       flat
       tile
@@ -15,9 +15,9 @@
           <div
             v-for="(component, index) in components"
             v-show="index < components.length - 1"
-            :id="`rx-component-${component.id}`"
-            :key="`rx-component-${component.id}`"
-            class="rx-component"
+            :id="`rxcomponent-${component.id}`"
+            :key="`rxcomponent-${component.id}`"
+            class="rxcomponent"
             @mousedown.stop="onComponentClick(component.id)"
           >
             <div v-if="index < components.length - 1" class="pa-2 fill-height">
@@ -69,10 +69,10 @@ export default Vue.extend({
   },
   mounted() {
     this.$nextTick(() => {
-      setCanvasEl(this.$el.querySelector('#rx-canvas') as HTMLElement);
+      setCanvasEl(this.$el.querySelector('#rxcanvas') as HTMLElement);
 
       // @ts-ignore
-      this.createCanvas(this.$el.querySelector('#rx-canvas'));
+      this.createCanvas(this.$el.querySelector('#rxcanvas'));
       // @ts-ignore
       this.createSheet(this.$el.querySelector('#rx-sheet'));
       // @ts-ignore
@@ -86,8 +86,7 @@ export default Vue.extend({
           tap(value => {
             const [component]: CanvasComponent[] = this.components;
             const [rxComponent, rxHandler] = component.handlers;
-            const percent = value / 120;
-            const k = Math.sin((Math.PI / 2) * percent);
+            const k = value === 0 ? 1 / 120 : (value + 1) / value;
             rxComponent.scale([k, k]);
             if (value >= 120) {
               sub.unsubscribe();
@@ -129,7 +128,7 @@ export default Vue.extend({
   100% {
   }
 }
-.rx-component {
+.rxcomponent {
   animation-name: animation;
   animation-duration: 2s;
   animation-fill-mode: forwards;
